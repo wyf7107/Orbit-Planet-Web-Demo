@@ -1,0 +1,32 @@
+{
+    "Earth": {
+        "name":"Earth",
+        "color":"Blue",
+        "radius":"6300km"
+    },
+
+    "Moon":{
+    	"name":"Moon",
+    	"color":"Grey",
+    	"radius":"1800km"
+    },
+
+    "Venus":{
+    	"name":"Venus",
+    	"color":"Red",
+    	"radius":"6050km"
+    },
+
+    "Uranus":{
+    	"name":"Uranus",
+    	"color":"Light Blue",
+    	"radius":"25350km"
+    },
+
+    "Jupiter":{
+    	"name":"Jupiter",
+    	"color":"Brown",
+    	"radius":"60000km"
+    }
+    
+}

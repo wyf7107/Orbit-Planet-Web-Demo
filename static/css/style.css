@@ -1,0 +1,114 @@
+body{
+	margin: 0;
+	padding:0;
+	background:url(bg.jpeg);
+}
+
+/* side bar style */
+.sidenav {
+    height: 100%; 
+    width: 25%; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 20px;
+    text-align: center;
+}
+
+.sidenav input{
+	padding: 6px 8px 6px 16px;
+	font-size: 25px;
+	color:#818181;
+}
+
+.sidenav label{
+	padding: 6px 8px 6px 16px;
+	font-size: 15px;
+	color:white;
+}
+
+
+
+
+
+
+/* Orbit Planet styles  */
+
+.center{
+	position: absolute;
+	top: 50%;
+	left:60%;
+	transform: translate(-50%,-50%);
+	width: 200px;
+	height:200px;
+	border-radius: 50%;
+	background: transparent;
+}
+
+.center .sun{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width: 100px;
+	height:100px;
+	border-radius: 50%;
+	background: #fff;
+	box-shadow: 0 0 15px rgba(0,155,255,0.5),
+				0 0 30px rgba(0,155,255,0.5),
+				0 0 45px rgba(0,155,255,0.5),
+				0 0 60px rgba(0,155,255,0.5),
+				0 0 10px rgba(0,155,255,0.5);
+}
+
+.center .sun .earth{
+	position: absolute;
+	top: 50%;
+	left:50%;
+	width: 250px;
+	height:2px;
+	background: transparent;
+	transform-origin: left;
+	-webkit-animation: orbit 10s linear infinite;
+}
+
+#planetDiv{
+	content: url(earth.png);
+	position: absolute;
+	top: -25px;
+	right:0px;
+	width: 50px;
+	height:50px;
+	border-radius: 100%;
+	background: #fff;
+	box-shadow: 0 0 15px rgba(0,155,255,0.5),
+				0 0 30px rgba(0,155,255,0.5),
+				0 0 45px rgba(0,155,255,0.5),
+				0 0 60px rgba(0,155,255,0.5),
+				0 0 10px rgba(0,155,255,0.5);
+	-webkit-animation:  orbit  10s linear infinite;
+}
+
+
+
+@-webkit-keyframes orbit {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+/*responseive design */
+@media only screen and (max-width: 700px){
+	.sidenav table{
+		width: 100%;
+	}
+	.center .sun .earth{
+		width: 150px;
+	}
+	label{
+		display: none;
+	}
+}

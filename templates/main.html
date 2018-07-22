@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="OrbitPlanetApp">
+<head>
+	<title>Orbiting Planet!</title>
+	<link rel="stylesheet"  type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="{{ url_for('static',filename='js/app.js') }}"></script>
+</head>
+<body>
+<div class="sidenav" ng-controller="orbitSpeedController" ng-init="orbiting='1'">
+  <form name="planetSpeedForm" data-ng-submit="submitSpeed()">
+  	<speed-table></speed-table>
+  	<planet-table></planet-table>
+  	<hr>
+  	<input type="submit" value="Change Speed!">
+  </form>
+  <button ng-click="stopOrbit()" id="stopButton">Stop Orbiting!</button><br>
+  <button ng-click="changePlanet()" id="changePlanetButtn">Change a Planet!</button>
+  <hr>
+</div>
+
+
+
+<div class="center">
+	<div class="sun">
+		<div class="earth">
+			<div id="planetDiv" ng-style="{'content':content}"></div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
